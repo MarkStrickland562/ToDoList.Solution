@@ -1,4 +1,6 @@
 c:\Users\mstrickland\Desktop\Epicodus\Csharp\ToDoList.Solution\ToDoList\bin\Debug\netcoreapp1.1\ToDoList.deps.json
+c:\Users\mstrickland\Desktop\Epicodus\Csharp\ToDoList.Solution\ToDoList\bin\Debug\netcoreapp1.1\ToDoList.runtimeconfig.json
+c:\Users\mstrickland\Desktop\Epicodus\Csharp\ToDoList.Solution\ToDoList\bin\Debug\netcoreapp1.1\ToDoList.runtimeconfig.dev.json
 c:\Users\mstrickland\Desktop\Epicodus\Csharp\ToDoList.Solution\ToDoList\bin\Debug\netcoreapp1.1\ToDoList.dll
 c:\Users\mstrickland\Desktop\Epicodus\Csharp\ToDoList.Solution\ToDoList\bin\Debug\netcoreapp1.1\ToDoList.pdb
 c:\Users\mstrickland\Desktop\Epicodus\Csharp\ToDoList.Solution\ToDoList\obj\Debug\netcoreapp1.1\ToDoList.csproj.CoreCompileInputs.cache
