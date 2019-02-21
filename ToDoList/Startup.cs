@@ -23,6 +23,7 @@ namespace ToDoList
     }
     public void Configure(IApplicationBuilder app)
      {
+       app.UseDeveloperExceptionPage();
        app.UseMvc(routes =>
        {
          routes.MapRoute(
@@ -34,8 +35,6 @@ namespace ToDoList
          {
            await context.Response.WriteAsync("Something went wrong!");
          });
-
-        app.UseDeveloperExceptionPage();
      }
   }
 }
