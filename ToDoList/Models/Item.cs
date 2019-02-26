@@ -24,6 +24,11 @@ namespace ToDoList.Models
       _description = newDescription;
     }
 
+    public int GetId()
+    {
+      return _id;
+    }
+
     public static List<Item> GetAll()
     {
       List<Item> allItems = new List<Item> {};
@@ -63,11 +68,6 @@ namespace ToDoList.Models
       {
        conn.Dispose();
       }
-    }
-
-    public int GetId()
-    {
-      return _id;
     }
 
     public static Item Find(int id)
@@ -138,6 +138,21 @@ namespace ToDoList.Models
       if (conn != null)
       {
         conn.Dispose();
+      }
+    }
+
+    public override bool Equals(System.Object otherItem)
+    {
+      if (!(otherItem is Item))
+      {
+        return false;
+      }
+      else
+      {
+        Item newItem = (Item) otherItem;
+        bool idEquality = (this.GetId() == newItem.GetId());
+        bool descriptionEquality = (this.GetDescription() == newItem.GetDescription());
+        return (idEquality && descriptionEquality);
       }
     }
   }
