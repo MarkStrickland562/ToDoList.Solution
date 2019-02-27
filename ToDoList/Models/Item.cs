@@ -114,13 +114,13 @@ namespace ToDoList.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"INSERT INTO items (description, categoryId) VALUES (@ItemDescription, @categoryId);";
+      cmd.CommandText = @"INSERT INTO items (description, category_id) VALUES (@ItemDescription, @categoryId);";
       MySqlParameter description = new MySqlParameter();
       description.ParameterName = "@ItemDescription";
       description.Value = this._description;
       cmd.Parameters.Add(description);
       MySqlParameter categoryId = new MySqlParameter();
-      categoryId.ParameterName = "@category_id";
+      categoryId.ParameterName = "@categoryId";
       categoryId.Value = this._categoryId;
       cmd.Parameters.Add(categoryId);
       cmd.ExecuteNonQuery();
