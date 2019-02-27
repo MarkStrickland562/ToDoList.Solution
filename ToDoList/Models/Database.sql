@@ -8,6 +8,8 @@ ENGINE = InnoDB;
 
 ALTER TABLE items ADD category_id INT;
 
+CREATE TABLE categories (id serial PRIMARY KEY, name VARCHAR(255));
+
 create database to_do_list_test;
 
 use to_do_list_test;
@@ -17,3 +19,5 @@ CREATE TABLE items (id INT NOT NULL AUTO_INCREMENT ,
 ENGINE = InnoDB;
 
 ALTER TABLE items ADD category_id INT;
+
+CREATE TABLE categories (id serial PRIMARY KEY, name VARCHAR(255));
