@@ -180,13 +180,30 @@ namespace ToDoList.Tests
     {
       //Arrange
       Category newCategory = new Category("Home Tasks");
-      Item newItem = new Item("Walk the dog.", 1, newCategory.GetId());
+      Item newItem = new Item("Walk the dog.", newCategory.GetId(), 1);
 
       //Act
       int result = newItem.GetCategoryId();
 
       //Assert
       Assert.AreEqual(newCategory.GetId(), result);
+    }
+
+    [TestMethod]
+    public void Delete_DeletesItemFromDatabase_String()
+    {
+      //Arrange
+      string firstDescription = "Walk the Dog";
+      Item testItem = new Item(firstDescription, 1);
+      testItem.Save();
+
+      //Act
+      testItem.Delete();
+      Item foundItem = Item.Find(testItem.GetId());
+      int result = foundItem.GetId();
+
+      //Assert
+      Assert.AreEqual(0, result);
     }
   }
 }

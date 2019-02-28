@@ -97,6 +97,23 @@ namespace ToDoList.Tests
      CollectionAssert.AreEqual(testItemList, resultItemList);
    }
 
+   [TestMethod]
+   public void Delete_DeletesCategoryFromDatabase_String()
+   {
+     //Arrange
+     string firstName = "Work";
+     Category testCategory = new Category(firstName, 1);
+     testCategory.Save();
+
+     //Act
+     testCategory.Delete();
+     Category foundCategory = Category.Find(testCategory.GetId());
+     int result = foundCategory.GetId();
+
+     //Assert
+     Assert.AreEqual(0, result);
+   }
+
     public void Dispose()
     {
       Item.ClearAll();
